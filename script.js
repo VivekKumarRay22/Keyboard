@@ -16,28 +16,11 @@ a.onclick = function () {
   aSound.play()
 }
 
-/**
- * * Play A sound on click
- */
-document.addEventListener("keydown", function (e) {
-  if (e.key === "a") {
-    a.click()
-  }
-})
-
 // *Play B sound when B is pressed on keyboard
 b.onclick = function () {
   bSound.currentTime = 0
   bSound.play()
 }
-/**
- * * Play B sound on click
- */
-document.addEventListener("keydown", function (e) {
-  if (e.key === "b") {
-    b.click()
-  }
-})
 
 // * Play C sound when C is pressed on keyboard
 c.onclick = function () {
@@ -45,28 +28,11 @@ c.onclick = function () {
   cSound.play()
 }
 
-/**
- * * Play C sound on click
- */
-document.addEventListener("keydown", function (e) {
-  if (e.key === "c") {
-    c.click()
-  }
-})
-
 // * Play D sound when D is pressed on keyboard
 d.onclick = function () {
   dSound.currentTime = 0
   dSound.play()
 }
-/**
- * * Play D sound on click
- */
-document.addEventListener("keydown", function (e) {
-  if (e.key === "d") {
-    d.click()
-  }
-})
 
 // * Play H sound when H is pressed on keyboard
 h.onclick = function () {
@@ -74,10 +40,24 @@ h.onclick = function () {
   hSound.play()
 }
 
+
+
 /**
- * * Play H sound on click
+ * * Play A sound on click
  */
 document.addEventListener("keydown", function (e) {
+  if (e.key === "a") {
+    a.click()
+  }
+  if (e.key === "b") {
+    b.click()
+  }
+  if (e.key === "c") {
+    c.click()
+  }
+  if (e.key === "d") {
+    d.click()
+  }
   if (e.key === "h") {
     h.click()
   }
