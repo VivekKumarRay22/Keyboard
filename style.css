@@ -25,7 +25,8 @@ button {
     cursor: pointer;
 }
 
-button:active {
+button:active,
+button.pressed {
     background-color: blue;
 
 }

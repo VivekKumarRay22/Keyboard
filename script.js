@@ -10,55 +10,46 @@ const cSound = new Audio("./alphabets/c.mp3")
 const dSound = new Audio("./alphabets/d.mp3")
 const hSound = new Audio("./alphabets/h.mp3")
 
-// *Play A sound when A is pressed on keyboard
+const keys = {
+  a: a,
+  b: b,
+  c: c,
+  d: d,
+  h: h,
+}
+
+// *Play sound when pressed on digital keyboard
 a.onclick = function () {
   aSound.currentTime = 0
   aSound.play()
 }
 
-// *Play B sound when B is pressed on keyboard
 b.onclick = function () {
   bSound.currentTime = 0
   bSound.play()
 }
 
-// * Play C sound when C is pressed on keyboard
 c.onclick = function () {
   cSound.currentTime = 0
   cSound.play()
 }
 
-// * Play D sound when D is pressed on keyboard
 d.onclick = function () {
   dSound.currentTime = 0
   dSound.play()
 }
 
-// * Play H sound when H is pressed on keyboard
 h.onclick = function () {
   hSound.currentTime = 0
   hSound.play()
 }
 
-
-
 /**
- * * Play A sound on click
+ * * Play sound when clicked on physical keyboard
  */
 document.addEventListener("keydown", function (e) {
-  if (e.key === "a") {
-    a.click()
-  }
-  if (e.key === "b") {
-    b.click()
-  }
-  if (e.key === "c") {
-    c.click()
-  }
-  if (e.key === "d") {
-    d.click()
-  }
-  if (e.key === "h") {
-    h.click()
+  if (keys[e.key]) {
+    keys[e.key].classList.add("pressed")
+    keys[e.key].click()
   }
 })
