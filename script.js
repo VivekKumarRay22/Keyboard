@@ -48,8 +48,16 @@ h.onclick = function () {
  * * Play sound when clicked on physical keyboard
  */
 document.addEventListener("keydown", function (e) {
+  const key = e.key.toLowerCase()
   if (keys[e.key]) {
     keys[e.key].classList.add("pressed")
     keys[e.key].click()
+  }
+})
+
+document.addEventListener("keyup", function (e) {
+  const key = e.key.toLowerCase()
+  if (keys[e.key]) {
+    keys[e.key].classList.remove("pressed")
   }
 })
